@@ -1,0 +1,109 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aspose-barcode-foss"
+version = "0.1.0"
+description = "Pure-Python barcode generator for linear and 2D symbologies (Code 128, Code 39, EAN/UPC, QR Code) with SVG and PNG output."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Aspose Pty Ltd" },
+]
+maintainers = [
+    { name = "Aspose Pty Ltd" },
+]
+keywords = [
+    "barcode",
+    "barcode-generator",
+    "qr",
+    "qr-code",
+    "code128",
+    "code39",
+    "ean13",
+    "ean8",
+    "upc",
+    "upca",
+    "upce",
+    "svg",
+    "png",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "Pillow>=10.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/aspose-barcode-foss/Aspose.Barcode-FOSS-for-Python"
+Repository = "https://github.com/aspose-barcode-foss/Aspose.Barcode-FOSS-for-Python"
+Issues = "https://github.com/aspose-barcode-foss/Aspose.Barcode-FOSS-for-Python/issues"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.15.7",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+aspose_barcode_foss = ["py.typed"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+# Ruff rules index: https://docs.astral.sh/ruff/rules/
+select = [
+    # flake8-builtins: prevent shadowing Python builtins.
+    "A",
+    # flake8-bugbear: catch likely bugs and risky patterns.
+    "B",
+    # pycodestyle errors: enforce error-level style checks.
+    "E",
+    # Pyflakes: catch undefined names, unused imports, and similar issues.
+    "F",
+    # Pylint convention: enforce consistency and maintainability rules.
+    "PLC",
+    # Pylint error: catch likely runtime and logic errors.
+    "PLE",
+    # flake8-print: flag print and pprint usage in library code.
+    "T20",
+    # pyupgrade: prefer modern syntax for the target Python version.
+    "UP",
+    # pycodestyle warnings: enforce warning-level style checks.
+    "W",
+]
+ignore = [
+    # UP006 non-pep585-annotation: allow typing.List-style annotations over list[int].
+    # Rule docs: https://docs.astral.sh/ruff/rules/non-pep585-annotation/
+    "UP006",
+    # UP007 non-pep604-annotation-union: allow typing.Union[X, Y] over X | Y.
+    # Rule docs: https://docs.astral.sh/ruff/rules/non-pep604-annotation-union/
+    "UP007",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Example scripts intentionally print their results to stdout.
+"examples/*.py" = ["T201"]

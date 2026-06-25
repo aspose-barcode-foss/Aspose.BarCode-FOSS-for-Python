@@ -1,0 +1,16 @@
+"""Shared pytest configuration."""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+
+PUBLIC_ROOT = Path(__file__).resolve().parents[1]
+SRC_DIR = PUBLIC_ROOT / "src"
+
+if str(PUBLIC_ROOT) not in sys.path:
+    sys.path.insert(0, str(PUBLIC_ROOT))
+
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))

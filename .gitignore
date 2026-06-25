@@ -1,0 +1,35 @@
+# Python bytecode and tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Test and coverage artifacts
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Deterministic example outputs
+examples/*.output.svg
+examples/*.output.png
+examples/*.output.pdf
+
+# Editor and machine-local settings
+.DS_Store
+.idea/
+.vscode/

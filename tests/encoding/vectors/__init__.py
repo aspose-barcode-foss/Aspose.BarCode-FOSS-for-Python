@@ -1,0 +1,1 @@
+"""Symbology-specific encoding vectors."""
