@@ -260,3 +260,5 @@ Runnable example scripts and what each one demonstrates are listed in
 ## License
 
 This project is licensed under the [MIT License](LICENSE). The MIT License permits use, copying, modification, distribution, sublicensing, and commercial use, provided its copyright and permission notice are retained. The software is provided without warranty.
+
+CLA signing notification test
